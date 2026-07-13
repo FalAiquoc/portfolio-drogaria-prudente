@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: var(--p-50);
+  --color-primary-100: var(--p-100);
+  --color-primary-200: var(--p-200);
+  --color-primary-300: var(--p-300);
+  --color-primary-400: var(--p-400);
+  --color-primary-500: var(--p-500);
+  --color-primary-600: var(--p-600);
+  --color-primary-700: var(--p-700);
+  --color-primary-800: var(--p-800);
+  --color-primary-900: var(--p-900);
+
+  --color-accent-50: var(--a-50);
+  --color-accent-100: var(--a-100);
+  --color-accent-200: var(--a-200);
+  --color-accent-300: var(--a-300);
+  --color-accent-400: var(--a-400);
+  --color-accent-500: var(--a-500);
+  --color-accent-600: var(--a-600);
+  --color-accent-700: var(--a-700);
+  --color-accent-800: var(--a-800);
+  --color-accent-900: var(--a-900);
+
+  --font-display: var(--font-display-family), system-ui, sans-serif;
+  --font-body: var(--font-body-family), system-ui, sans-serif;
+}
+
+:root {
+  /* Fontes padrão (serão alteradas via inline @import no index.html ou no topo do CSS se necessário) */
+  --font-display-family: 'Inter';
+  --font-body-family: 'Inter';
+
+  /* Cores padrão do template */
+  --p-50: #f8fafc;
+  --p-100: #f1f5f9;
+  --p-200: #e2e8f0;
+  --p-300: #cbd5e1;
+  --p-400: #94a3b8;
+  --p-500: #64748b;
+  --p-600: #475569;
+  --p-700: #334155;
+  --p-800: #1e293b;
+  --p-900: #0f172a;
+
+  --a-50: #fef2f2;
+  --a-100: #fee2e2;
+  --a-200: #fecaca;
+  --a-300: #fca5a5;
+  --a-400: #f87171;
+  --a-500: #ef4444;
+  --a-600: #dc2626;
+  --a-700: #b91c1c;
+  --a-800: #991b1b;
+  --a-900: #7f1d1d;
+}
+
+/* Reset de scroll e comportamento suave */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--p-50);
+  color: var(--p-900);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevenir animações se o usuário preferir menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
