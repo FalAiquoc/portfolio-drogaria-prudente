@@ -25,7 +25,7 @@ export const storeData: StoreData = {
   typography: {
     displayFontFamily: 'Outfit',
     bodyFontFamily: 'Inter',
-    importUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap',
+    importUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap',
   },
   features: [
     {
@@ -70,6 +70,13 @@ export const storeData: StoreData = {
       imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600',
     },
   ],
-  instagramUrl: 'https://instagram.com',
-  facebookUrl: 'https://facebook.com',
+  instagramUrl: 'https://www.instagram.com',
+  facebookUrl: 'https://www.facebook.com',
+  brands: [
+    { name: 'Medley', desc: 'Genéricos de confiança' },
+    { name: 'EMS', desc: 'Líder em medicamentos' },
+    { name: 'Eurofarma', desc: 'Inovação em saúde' },
+    { name: 'La Roche-Posay', desc: 'Cuidados com a pele' },
+    { name: 'Vichy', desc: 'Saúde da pele sensível' }
+  ]
 };

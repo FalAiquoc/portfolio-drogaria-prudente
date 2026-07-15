@@ -5,6 +5,8 @@ export interface ProductOrService {
   price?: string;
   iconName: string; // Ex: 'Activity', 'ShoppingBag', etc.
   imageUrl?: string;
+  category?: string; // Ex: 'medicamentos', 'dermocosmeticos', 'vitaminas'
+  tag?: string; // Ex: 'Destaque', 'Fidelidade'
 }
 
 export interface StoreData {
@@ -28,7 +30,6 @@ export interface StoreData {
   colors: {
     primaryHex: string;
     accentHex: string;
-    // Variações hexadecimais adicionais se necessário
     bgHex?: string;
   };
   typography: {
@@ -44,4 +45,5 @@ export interface StoreData {
   products: Array<ProductOrService>;
   instagramUrl?: string;
   facebookUrl?: string;
+  brands?: Array<{ name: string; desc: string }>;
 }
