@@ -15,6 +15,7 @@ export interface StoreData {
   description: string;
   aboutText: string;
   aboutImage?: string;
+  logoUrl?: string;
   phone: string;
   phoneFormatted: string;
   whatsappNumber: string;

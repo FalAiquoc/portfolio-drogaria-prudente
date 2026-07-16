@@ -6,6 +6,7 @@ export const storeData: StoreData = {
   description: 'Há anos servindo a comunidade de Natal com medicamentos de qualidade, genéricos com preços baixos e uma linha completa de dermocosméticos e higiene.',
   aboutText: 'A Drogaria Prudente nasceu da vontade de oferecer um serviço de saúde próximo e confiável para os moradores de Lagoa Nova. Acreditamos que cuidar da saúde vai além de vender medicamentos; envolve atenção, orientação correta de farmacêuticos dedicados e economia real para o bolso do cliente, com os melhores programas de fidelidade e descontos.',
   aboutImage: 'https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&q=80&w=1200',
+  logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa597y4zHh1C4S00d02-y5z-2sF3v38D9z8A&s',
   phone: '(84) 4141-4440',
   phoneFormatted: '8441414440',
   whatsappNumber: '558441414440',

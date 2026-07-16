@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { storeData } from './data';
 import { Icon } from './components/Icon';
 
-// Componente de Logotipo Vetorial Personalizado para Farmácia (Cruz Médica estilizada com folhas/cuidado)
+// Componente de Logotipo para Farmácia (Logo oficial ou Cruz Médica estilizada como fallback)
 function Logo({ className = "h-10", dark = false }: { className?: string; dark?: boolean }) {
   const primaryColor = '#10b981'; // Verde Esmeralda
   const accentColor = '#06b6d4'; // Ciano
@@ -10,16 +10,18 @@ function Logo({ className = "h-10", dark = false }: { className?: string; dark?:
 
   return (
     <div className={`flex items-center space-x-2.5 ${className}`}>
-      <svg className="h-full aspect-square" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g strokeLinecap="round" strokeLinejoin="round">
-          {/* Cruz Médica estilizada com gradiente e círculo de proteção */}
-          <circle cx="100" cy="100" r="85" stroke={accentColor} strokeWidth="10" strokeDasharray="15 8" />
-          <path d="M 100 40 L 100 160" stroke={primaryColor} strokeWidth="24" />
-          <path d="M 40 100 L 160 100" stroke={primaryColor} strokeWidth="24" />
-          {/* Brilho interno curvo */}
-          <path d="M 75 75 Q 100 65 125 75" stroke={accentColor} strokeWidth="8" />
-        </g>
-      </svg>
+      {storeData.logoUrl ? (
+        <img src={storeData.logoUrl} alt={storeData.name} className="h-8 w-auto object-contain rounded-full border border-emerald-500/10" />
+      ) : (
+        <svg className="h-full aspect-square" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="100" cy="100" r="85" stroke={accentColor} strokeWidth="10" strokeDasharray="15 8" />
+            <path d="M 100 40 L 100 160" stroke={primaryColor} strokeWidth="24" />
+            <path d="M 40 100 L 160 100" stroke={primaryColor} strokeWidth="24" />
+            <path d="M 75 75 Q 100 65 125 75" stroke={accentColor} strokeWidth="8" />
+          </g>
+        </svg>
+      )}
       <div className="flex flex-col leading-[0.95] text-left font-display">
         <span className="text-lg font-black tracking-tight uppercase" style={{ color: textColor }}>DROGARIA</span>
         <span className="text-[13px] font-black tracking-[0.15em]" style={{ color: primaryColor }}>PRUDENTE</span>
